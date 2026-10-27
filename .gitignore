@@ -1,0 +1,15 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+obj-*/
+publish/
+
+# Visual Studio / IDE files
+.vs/
+.idea/
+*.user
+*.suo
+
+# Local logs and temporary files
+*.log
+*.tmp

@@ -1,74 +1,53 @@
 # CheatScanner
 
-<p align="center">
-  <b>Lightweight Cheat Detection Tool for Logs & .jar Files</b><br>
-  <i>Side project • Learning-focused • Actually useful</i>
-</p>
+A lightweight Windows tool for scanning log and `.jar` files for suspicious Minecraft cheats and mods. CheatScanner started as a side project for my own server and is also a learning project.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/status-beta-orange" />
-  <img src="https://img.shields.io/badge/purpose-cheat%20detection-red" />
-  <img src="https://img.shields.io/badge/contributions-welcome-brightgreen" />
-</p>
+> **Status: Beta.** Detection can miss cheats or produce false positives. Vape trace detection is especially unreliable, so treat results as clues to review rather than definitive proof.
 
----
+## Features
 
-## 🚀 Overview
+- Scans log files and `.jar` files
+- Checks for known cheat names, including Doomsday, Meteor, and Raven B++
+- Looks for disguised or renamed mods
+- Attempts to identify Vape traces (not reliable yet)
 
-**CheatScanner** is a tool that scans **log files** and **`.jar` files** to detect suspicious or prohibited cheats used by players.
+CheatScanner is a practical project in development, not a professional or guaranteed anti-cheat solution.
 
-Originally built as a **side project for my own server**, this tool is also part of my learning journey. I don’t claim to be an expert — this is built by me with some help from vibe coding and Codex.
+## Requirements
 
----
+- Windows
+- .NET 10 SDK to build and run the project from source
 
-## 🔍 Features
+The project uses WPF and targets `net10.0-windows`.
 
-* ✅ Detects known cheats:
+## Build and run
 
-  * Doomsday
-  * Meteor
-  * Raven B++
-* 🕵️ Finds **disguised / renamed mods**
-* 📂 Scans both **logs** and **`.jar` files**
-* ⚠️ Attempts to detect **Vape traces** *(currently unreliable)*
-
----
-
-## ⚙️ Status
-
-> 🚧 **Beta Testing**
-
-The project is still in development.
-Expect:
-
-* Bugs
-* Missed detections
-* False positives
-
----
-
-## 🧠 Philosophy
-
-This is **not a professional anti-cheat**.
-It’s a **practical learning project** that aims to be useful while improving over time.
-
----
-
-## 🛠️ Usage
+Clone the repository and build the solution:
 
 ```bash
-run scanner.exe or public then fixed and then scanner.exe or AntiCheatScaner.exe
+git clone https://github.com/sandro9800/cheat-scanner.git
+cd cheat-scanner
+dotnet build AntiCheatScanner.sln --configuration Release
 ```
 
----
+You can also run the application from source with:
 
-## 🤝 Feedback & Contributions
+```bash
+dotnet run --project AntiCheatScanner.csproj
+```
 
-Found a bug? A bypass? Something broken?
-Open an issue or contact me — feedback helps improve the tool.
-I have used help from codex and am not gonna hide it
----
+Use the application to scan the log or `.jar` files you want to inspect. Review findings in context; a detection alone does not prove that a player is cheating.
 
-## 📫 Contact
+## Feedback and contributions
 
-**Discord** Iobidze
+Found a bug, a false positive, or a missed detection? Open a GitHub issue with details that are safe to share. Do not upload private logs or other sensitive data without removing it first.
+
+Contributions and suggestions are welcome. Please keep changes focused and explain how you tested them.
+
+## Contact
+
+Discord: **Iobidze**
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for the license text. Third-party dependencies and other included material remain subject to their own licenses.
